@@ -21,21 +21,29 @@
         }
       }
     </style>
-
   </head>
   <body class="bg-danger text-white">
-    <div class="px-4 py-5 my-5 text-center ">
-      <h1 class="display-2 fw-bold" >Image Classifier</h1><br>
+    <div class="px-4 py-5 my-5 text-center">
+      <h1 class="display-2 fw-bold">Image Classifier</h1>
+      <br />
       <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Upload an image of a truck or a ship and I'll try my best to guess it &#128521;.</p>
-
-      <form      class="input-group mb-3"   action="/upload"
-       
-
-        method="POST"
-        enctype="multipart/form-data"      >
-          <input type="file" class="form-control" name="image" /> <input class="input-group-text" type="submit" />
-      </form></div></div>
+        <p class="lead mb-4">
+          Upload an image of a truck or a ship and I'll try my best to guess it
+          &#128521;.
+        </p>
+        <div class="input-group mb-3">
+          <form
+            class="input-group mb-3"
+            action="/upload"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <input type="file" class="form-control" name="image" />
+            <input class="input-group-text" type="submit" />
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
   <link
     rel="stylesheet"
