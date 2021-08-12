@@ -9,6 +9,7 @@ Flask = "*"
 scikit-image = "*"
 gunicorn = "*"
 flask = "*"
+flask-cors = "*"
 
 [dev-packages]
 black = "*"
