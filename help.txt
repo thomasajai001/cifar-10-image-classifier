@@ -1,0 +1,48 @@
+pip3 install flask
+
+basic template
+
+from flask import Flask
+app=Flask(__name__)
+@app.route('/')
+def index():
+    return "Hello World"
+if __name__=="__main__":
+    app.run(debug=True)
+    
+    
+    from flask import Flask,render_template
+    craete templates folder
+    render_template will look into templates folder for html files
+    return render_template('index.html')
+    
+    
+    for common html pages
+    use base html
+    in base html
+     {% block body%} {% endblock%}
+     
+     in index.html
+  {% extends 'base.html'%}
+
+{% block head %}
+<h1>This is index PAge</h1>
+ {% endblock%}
+
+
+{% block body%} 
+<h1>This is index PAge</h1>
+<h1>This is index PAge</h1>
+{% endblock%}
+
+
+
+
+for " " use double {{ }}
+
+static files linking approach
+ <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css') }}">
+ 
+ 
+ @app.route('/',methods=['POST','GET'])
+
