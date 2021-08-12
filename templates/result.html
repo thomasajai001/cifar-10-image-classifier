@@ -4,14 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Result</title>
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+      </style>
 </head>
-<body>
+
+<body class="bg-danger text-white">    <div class="container">
+    <div class="px-4 py-5 my-5 text-center ">
+        <h1 class="display-2 fw-bold" >Result</h1><br></div>
     {% for key, value in result.items() %}
-    <tr>
-        <th> {{ key }} </th>
-        <td> {{ value }} </td>
-     </tr>
+     {% if key == "image" %}
+     <div class="container-fluid text-center">
+     <img src="{{ url_for('static', filename=value) }}"  class="rounded" style="height: 70%;width:70%;">
+    </div>
+    {% elif key == "error" %}
+    <h2 >{{value}}</h2>
+    <p style="font-size:larger">Please provide uncorrupted picture</picture></p>
+ {% else  %}
+    
+     <br><br><h2 style="text-align: center;">Its a {{value}} !!</h2>
+    
+ {% endif %}
+
      {% endfor %} 
+     
+    </div><br><br>
+    <div class="text-center"><a href="./"><button type="button" class="btn btn-outline-light" >Go back</button></a></div:text-center>
 </body>
+<link
+rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+crossorigin="anonymous"
+/>
 </html>
